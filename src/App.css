@@ -1,0 +1,234 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #8568aa;
+  padding: 15px;
+  text-align: center;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #45a049;
+}
+
+/* Home Page Styles */
+.home-container {
+  text-align: center;
+  margin-top: 50px;
+  animation: fadeIn 2s ease-out;
+}
+
+.start-btn {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 25px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #45a049;
+}
+
+/* Todo List Styles */
+.todo-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-out;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+input[type="text"] {
+  width: 82%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #d7dee9;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+input[type="text"]:hover {
+  background-color: #e5d3fa;
+  transform: scale(1.08);
+}
+
+
+input[type="text"]:focus {
+  background-color: #e5d3fa;
+  transform: scale(1.03);
+  outline: none;
+}
+
+
+
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+h2 {
+  margin-top: 90px;
+  font-size: 39px;
+  color: #4caf50;
+}
+
+.task-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d7dee9;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.task-item:hover {
+  background-color: #e5d3fa;
+  transform: scale(1.03);
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.completed-task {
+  background-color: #e0ffe0;
+  text-decoration: line-through;
+  color: #f7ecec;
+}
+
+.completed-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.completed-task {
+  background-color: #d0f7d0;
+  color: #eb2424;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .input-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .task-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Red Remove Button */
+.remove-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: darkred;
+}
