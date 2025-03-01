@@ -5,16 +5,19 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
   font-family: "Arial", sans-serif;
   background-color: #f4f4f9;
 }
 
-h1,
-h2 {
+h1, h2 {
   font-weight: bold;
   color: #333;
   text-align: center;
+  margin: 0;
 }
 
 /* Navigation Styles */
@@ -76,13 +79,14 @@ nav {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: fadeIn 2s ease-out;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .input-container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  margin-left: 20px;
 }
 
 input[type="text"] {
@@ -102,15 +106,11 @@ input[type="text"]:hover {
   transform: scale(1.08);
 }
 
-
 input[type="text"]:focus {
   background-color: #e5d3fa;
   transform: scale(1.03);
   outline: none;
 }
-
-
-
 
 button {
   padding: 10px 20px;
@@ -191,7 +191,14 @@ h2 {
 }
 
 /* Responsive Design */
+
+/* Small Devices (Mobile, 375px and above) */
 @media (max-width: 768px) {
+  .todo-container {
+    padding: 15px;
+    margin: 20px;
+  }
+
   .input-container {
     flex-direction: column;
     align-items: stretch;
@@ -203,17 +210,89 @@ h2 {
   }
 
   button {
-    width: 100%;
+    width: 95%;
+    margin-top: 10px;
   }
 
   .task-item {
     flex-direction: column;
     align-items: stretch;
+    margin: 10px 0;
+    padding: 10px;
   }
 
   .task-actions {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+}
+
+/* Tablets (Medium devices, 768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .todo-container {
+    max-width: 65%;
+    margin: 30px auto;
+  }
+
+  .input-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  input[type="text"] {
+    width: 55%;
+  }
+
+  button {
+    width: auto;
+    margin-top: 0;
+  }
+
+  .task-item {
+    padding: 12px;
+    margin: 12px 0;
+  }
+
+  .task-actions {
+    gap: 8px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+}
+
+/* Desktop Devices (1024px and above) */
+@media (min-width: 1024px) {
+  .todo-container {
+    max-width: 900px;
+  }
+
+  input[type="text"] {
+    width: 82%;
+  }
+
+  button {
+    width: auto;
+    margin-top: 10px;
+  }
+
+  .task-item {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  h2 {
+    font-size: 39px;
   }
 }
 
